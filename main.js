@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const {renderer, scene, camera} = mindarThree;
     
     //video
-    const video = await loadVideo("./videos/video6.mp4");
+    const video = await loadVideo("./videos/video1.mp4");
     const texture = new THREE.VideoTexture(video);
 
-    // const geometry = new THREE.PlaneGeometry(1, 1);
+    const geometry = new THREE.PlaneGeometry(1, 1);
     // const material = createChromaMaterial(texture, 0x000000); //chroma
     
-    const geometry = new THREE.PlaneGeometry(2, 1080/(1920/2));
+    // const geometry = new THREE.PlaneGeometry(2, 1080/(1920/2));
     const material = new THREE.MeshBasicMaterial({map: texture});
     const plane = new THREE.Mesh(geometry, material);
 
