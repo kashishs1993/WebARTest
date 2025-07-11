@@ -1,5 +1,5 @@
-import {loadAudio, loadGLTF, loadVideo} from "../libs/loader.js";
-import{createChromaMaterial} from "../libs/chroma-video.js"
+import {loadAudio, loadGLTF, loadVideo} from "./libs/loader.js";
+import{createChromaMaterial} from "./libs/chroma-video.js"
 const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
