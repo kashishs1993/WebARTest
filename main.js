@@ -39,12 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+    dirLight.position.set(1, 2, 3);
+    scene.add(dirLight);
 
     //model
-    const gltf = await loadGLTF('./models/burger/burger1.gltf');
-    gltf.scene.scale.set(0.2, 0.2, 0.2);
+    const gltf = await loadGLTF('./models/burger2/burger2.glb');
+    gltf.scene.scale.set(1,1,1);
     gltf.scene.position.set(0, 0, 0);
     gltf.scene.rotation.set(45, 0, 0);
+
 
     // const gltf2 = await loadGLTF('./models/dance-1/scene.gltf');
     // gltf2.scene.scale.set(0.2, 0.2, 0.2);
@@ -88,7 +92,7 @@ const listener = new THREE.AudioListener();
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       const delta = clock.getDelta();
-      mixer.update(delta);
+      // mixer.update(delta);
       renderer.render(scene, camera);
     });
   }
