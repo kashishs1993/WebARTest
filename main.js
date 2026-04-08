@@ -55,9 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.group.add(gltf.scene);
     // anchor.group.add(gltf2.scene);
 
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const action = mixer.clipAction(gltf.animations[0]);
-    action.play();
+    // --- for animation ---
+    // const mixer = new THREE.AnimationMixer(gltf.scene);
+    // const action = mixer.clipAction(gltf.animations[0]);
+    // action.play();
   
     // const mixer2 = new THREE.AnimationMixer(gltf2.scene);
     // const action2 = mixer2.clipAction(gltf2.animations[0]);
